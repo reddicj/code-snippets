@@ -1,0 +1,733 @@
+{
+  "Scala 2 compiler flags": {
+    "prefix": "",
+    "body": [
+      "  \"-deprecation\", // Warning and location for usages of deprecated APIs.",
+      "  \"-encoding\",",
+      "  \"utf-8\",         // Specify character encoding used by source files.",
+      "  \"-explaintypes\", // Explain type errors in more detail.",
+      "  \"-feature\",      // Emit warning and location for usages of features that should be imported explicitly.",
+      "  \"-unchecked\",    // Enable additional warnings where generated code depends on assumptions.",
+      "  \"-Xcheckinit\",   // Wrap field accessors to throw an exception on uninitialized access.",
+      "  \"-Xsource:3\",    // enables some Scala 3 syntax and behavior - https://docs.scala-lang.org/scala3/guides/migration/tooling-tour.html",
+      "",
+      "  // ********** Warning Settings ***********************************************",
+      "  \"-Wdead-code\",        //   Warn when dead code is identified.",
+      "  \"-Wextra-implicit\",   // Warn when more than one implicit parameter section is defined.",
+      "  \"-Wmacros:after\",     // Only inspect expanded trees when generating unused symbol warnings.",
+      "  \"-Wnumeric-widen\",    // Warn when numerics are widened.",
+      "  \"-Woctal-literal\",    // Warn on obsolete octal syntax.",
+      "  \"-Wunused:imports\",   // Warn if an import selector is not referenced.",
+      "  \"-Wunused:patvars\",   // Warn if a variable bound in a pattern is unused.",
+      "  \"-Wunused:privates\",  // Warn if a private member is unused.",
+      "  \"-Wunused:locals\",    // Warn if a local definition is unused.",
+      "  \"-Wunused:explicits\", // Warn if an explicit parameter is unused.",
+      "  \"-Wunused:implicits\", // Warn if an implicit parameter is unused.",
+      "  \"-Wunused:params\",    // Enable -Wunused:explicits,implicits.",
+      "  \"-Wvalue-discard\",    // Warn when non-Unit expression results are unused. <-- be good to fix these errors",
+      "",
+      "  // ********** Warnings to ignore ***********************************************",
+      "  \"-Wconf:src=target/.*:s,cat=deprecation:s\",",
+      "",
+      "  // ********** -Xlint: Enable recommended warnings ****************************",
+      "  \"-Xlint:adapted-args\", // Warn if an argument list is modified to match the receiver.",
+      "  // \"-Xlint:by-name-right-associative\",  // By-name parameter of right associative operator.",
+      "  \"-Xlint:constant\",           // Evaluation of a constant arithmetic expression results in an error.",
+      "  \"-Xlint:delayedinit-select\", // Selecting member of DelayedInit.",
+      "  // \"-Xlint:deprecation\", // Enable linted deprecations.",
+      "  \"-Xlint:doc-detached\",         // A Scaladoc comment appears to be detached from its element.",
+      "  \"-Xlint:eta-sam\",              // Warn on eta-expansion to meet a Java-defined functional interface that is not explicitly annotated with @FunctionalInterface.",
+      "  \"-Xlint:eta-zero\",             // Warn on eta-expansion (rather than auto-application) of zero-ary method.",
+      "  \"-Xlint:implicit-not-found\",   // Check @implicitNotFound and @implicitAmbiguous messages.",
+      "  \"-Xlint:inaccessible\",         // Warn about inaccessible types in method signatures.",
+      "  \"-Xlint:infer-any\",            // Warn when a type argument is inferred to be Any.",
+      "  \"-Xlint:missing-interpolator\", // A string literal appears to be missing an interpolator id.",
+      "  \"-Xlint:nonlocal-return\",      // A return statement used an exception for flow control.",
+      "  // \"-Xlint:nullary-override\",  // Warn when non-nullary `def f()' overrides nullary `def f'.",
+      "  // \"-Xlint:nullary-unit\", // Warn when nullary methods return Unit.",
+      "  \"-Xlint:option-implicit\",        // Option.apply used implicit view.",
+      "  \"-Xlint:package-object-classes\", // Class or object defined in package object.",
+      "  \"-Xlint:poly-implicit-overload\", // Parameterized overloaded implicit methods are not visible as view bounds.",
+      "  \"-Xlint:private-shadow\",         // A private field (or class parameter) shadows a superclass field.",
+      "  \"-Xlint:serial\",                 // @SerialVersionUID on traits and non-serializable classes.",
+      "  \"-Xlint:stars-align\",            // Pattern sequence wildcard must align with sequence component.",
+      "  \"-Xlint:type-parameter-shadow\",  // A local type parameter shadows a type already in scope.",
+      "  // \"-Xlint:unsound-match\",  // Pattern match may not be typesafe.",
+      "  \"-Xlint:valpattern\" // Enable pattern checks in val definitions."
+    ],
+    "description": "Scala 2 compiler flags"
+  },
+  "Pirum Core compiler flags": {
+    "prefix": "",
+    "body": [
+      "\"-unchecked\", ",
+      "\"-deprecation\", ",
+      "\"-feature\",",
+      "\"-Wdead-code\",        //  Warn when dead code is identified. ",
+      "\"-Wextra-implicit\",   // Warn when more than one implicit parameter section is defined. ",
+      "\"-Wmacros:after\",     // Only inspect expanded trees when generating unused symbol warnings. ",
+      "\"-Wnumeric-widen\",    // Warn when numerics are widened. ",
+      "\"-Woctal-literal\",    // Warn on obsolete octal syntax. ",
+      "\"-Wunused:imports\",   //Warn if an import selector is not referenced. ",
+      "\"-Wunused:patvars\",   // Warn if a variable bound in a pattern is unused. ",
+      "\"-Wunused:privates\",  // Warn if a private member is unused. ",
+      "\"-Wunused:locals\",    // Warn if a local definition is unused. ",
+      "\"-Wunused:explicits\", // Warn if an explicit parameter is unused. ",
+      "\"-Wunused:implicits\", // Warn if an implicit parameter is unused. ",
+      "\"-Wunused:params\",    // Enable -Wunused:explicits,implicits. ",
+      "\"-Wvalue-discard\",    // Warn when non-Unit expression results are unused. <-- be good to fix these errors",
+      "\"-language:_\", ",
+      "\"-release:11\", ",
+      "\"-encoding\", ",
+      "\"UTF-8\", ",
+      "\"-Ypatmat-exhaust-depth\", ",
+      "\"100\", ",
+      "\"-Yrangepos\" "
+    ],
+    "description": "Pirum Core compiler flags"
+  },
+  "Braces": {
+    "prefix": "",
+    "body": [
+      "{ $TM_SELECTED_TEXT }"
+    ],
+    "description": "Braces"
+  },
+  "import Java collection conversions (2.12)": {
+    "prefix": "imp",
+    "body": [
+      "import collection.JavaConverters._",
+      "// Then use .asScala or .asJava to convert"
+    ],
+    "description": "import Java collection conversions (2.12)"
+  },
+  "import Java option conversion (2.12)": {
+    "prefix": "imp",
+    "body": [
+      "import scala.compat.java8.OptionConverters._",
+      "// Then use .asScala or .asJava to convert"
+    ],
+    "description": "import Java option conversion (2.12)"
+  },
+  "import Java collection conversions (2.13+)": {
+    "prefix": "imp",
+    "body": [
+      "import scala.jdk.CollectionConverters._",
+      "// Then use .asScala or .asJava to convert"
+    ],
+    "description": "import Java collection conversions (2.13+)"
+  },
+  "import Java option conversion (2.13)": {
+    "prefix": "imp",
+    "body": [
+      "import scala.jdk.OptionConverters._",
+      "// Then use .asScala or .asJava to convert"
+    ],
+    "description": "import Java option conversion (2.13)"
+  },
+  "import Java future conversion": {
+    "prefix": "",
+    "body": [
+      "import scala.jdk.FutureConverters.*",
+      "// someJavaFuture.asScala"
+    ],
+    "description": "Java Future conversion"
+  },
+  "import Scala 2.13 collection compat": {
+    "prefix": "imp",
+    "body": [
+      "import scala.collection.compat._"
+    ],
+    "description": "import Scala 2.13 collection compat"
+  },
+  "import scala duration": {
+    "prefix": "imp",
+    "body": [
+      "import scala.concurrent.duration._"
+    ],
+    "description": "import scala duration"
+  },
+  "import Scala Duration Converters": {
+    "prefix": "imp",
+    "body": [
+      "import scala.jdk.DurationConverters.*",
+      "// javaDuration.toScala",
+      "// 5.seconds.toJava"
+    ],
+    "description": "import Scala Duration Converters"
+  },
+  "import Scala global ec": {
+    "prefix": "imp",
+    "body": [
+      "import scala.concurrent.ExecutionContext.Implicits.global"
+    ],
+    "description": "import Scala global ec"
+  },
+  "import Scala higher kinds": {
+    "prefix": "imp",
+    "body": [
+      "import language.higherKinds"
+    ],
+    "description": "import Scala higher kinds"
+  },
+  "import Scala implicit conversions": {
+    "prefix": "imp",
+    "body": [
+      "import scala.language.implicitConversions"
+    ],
+    "description": "import Scala implicit conversions"
+  },
+  "import Scala chaining": {
+    "prefix": "",
+    "body": [
+      "import scala.util.chaining.*",
+      "// .pipe(x => ???)"
+    ],
+    "description": "import Scala chaining"
+  },
+  "import Cats syntax and instances": {
+    "prefix": "imp",
+    "body": [
+      "import cats.syntax.all._ ",
+      "import cats.instances.all._"
+    ],
+    "description": "Cats syntax and instances"
+  },
+  "import zio": {
+    "prefix": "imp",
+    "body": [
+      "import zio._",
+      "import zio.blocking._",
+      "import zio.clock.Clock",
+      "import zio.stream._"
+    ],
+    "description": "import zio"
+  },
+  "import zio cats interop": {
+    "prefix": "imp",
+    "body": [
+      "import zio.interop.catz._"
+    ],
+    "description": "import zio cats interop"
+  },
+  "ZIO App main run function": {
+    "prefix": "",
+    "body": [
+      "override def run(args: List[String]): URIO[zio.ZEnv, ExitCode] = ???"
+    ],
+    "description": "ZIO App main run function"
+  },
+  "import quicklens": {
+    "prefix": "imp",
+    "body": [
+      "import com.softwaremill.quicklens._"
+    ],
+    "description": "import quicklens"
+  },
+  "import Chimney": {
+    "prefix": "imp",
+    "body": [
+      "import io.scalaland.chimney.dsl._"
+    ],
+    "description": "import Chimney"
+  },
+  "import Enumeratum": {
+    "prefix": "imp",
+    "body": [
+      "import enumeratum._"
+    ],
+    "description": "import Enumeratum"
+  },
+  "Enumeratum StringEnum": {
+    "prefix": "",
+    "body": [
+      "import enumeratum.values.{ StringEnum, StringEnumEntry }",
+      "// import enumeratum.values.{ CharEnum, CharEnumEntry }",
+      "",
+      "sealed abstract class MyStringEnum(override val value: String) extends StringEnumEntry",
+      "",
+      "object MyStringEnum extends StringEnum[MyStringEnum] {",
+      "",
+      "  val values = findValues",
+      "",
+      "  case object Done       extends MyStringEnum(\"Done\")",
+      "  case object InProgress extends MyStringEnum(\"In Progress\")",
+      "  case object Abort      extends MyStringEnum(\"Abort\")",
+      "  case object Fail       extends MyStringEnum(\"Fail\")",
+      "}"
+    ],
+    "description": "Enumeratum StringEnum"
+  },
+  "ZIO Test": {
+    "prefix": "ziotest",
+    "body": [
+      "import zio.*",
+      "import zio.test.*",
+      "import zio.test.Assertion.*",
+      "",
+      "object MyZIOTest extends ZIOSpecDefault {",
+      "",
+      "  def spec = suite(\"My tests\")(",
+      "    test(\"Test 1\") {",
+      "      assert(List.empty[Int])(isEmpty) &&",
+      "      assertTrue(2 + 2 == 4)",
+      "    },",
+      "    test(\"Test 2\") {",
+      "      assertZIO(ZIO.succeed(3))(equalTo(3))",
+      "    }",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "zio test"
+  },
+  "import ZIO Test Aspects": {
+    "prefix": "imp",
+    "body": [
+      "import zio.test.TestAspect._"
+    ],
+    "description": "import ZIO Test Aspects"
+  },
+  "ZIO Config Base Class": {
+    "prefix": "",
+    "body": [
+      "import com.typesafe.config.Config",
+      "import zio._",
+      "import zio.config.typesafe._",
+      "import zio.config.{ ConfigSource => CfgSource, _ }",
+      "",
+      "abstract class ConfigSource[Cfg: Tag] {",
+      "",
+      "  def config: ConfigDescriptor[Cfg]",
+      "",
+      "  lazy val live: ZLayer[Config, Throwable, Cfg] =",
+      "    ZLayer(for {",
+      "      typesafeConfig <- ZIO.service[Config]",
+      "      source          = CfgSource.fromTypesafeConfig(ZIO.succeed(typesafeConfig))",
+      "      cfg            <- read(config from source)",
+      "    } yield cfg)",
+      "}",
+      ""
+    ],
+    "description": "ZIO Config base class"
+  },
+  "ZIO Config Test": {
+    "prefix": "",
+    "body": [
+      "test(\"Read authorization config\") {",
+      "",
+      "  import zio.config.typesafe.TypesafeConfigSource",
+      "  import zio.config._",
+      "",
+      "  val config =",
+      "    \"\"\"",
+      "      |authorization {",
+      "      |  uri = \"http://foo.bar:8080\"",
+      "      |  enabled = true",
+      "      |}\"\"\".stripMargin.trim",
+      "",
+      "  val readConfig = read(AuthorizationConfig.config.unsourced.from(TypesafeConfigSource.fromHoconString(config)))",
+      "  assertZIO(readConfig)(equalTo(AuthorizationConfig(Uri.unsafeFromString(\"http://foo.bar:8080\"), true)))",
+      "}"
+    ],
+    "description": "ZIO Config Test"
+  },
+  "diffx Core": {
+    "prefix": "",
+    "body": [
+      "import com.softwaremill.diffx.generic.auto.*",
+      "import com.softwaremill.diffx.*",
+      "// println(compare(foo1, foo2).show())"
+    ],
+    "description": "diffx"
+  },
+  "diffx ScalaTest": {
+    "prefix": "",
+    "body": [
+      "import com.softwaremill.diffx.scalatest.DiffMatcher",
+      "import com.softwaremill.diffx.generic.auto._",
+      "// mix in DiffMatcher",
+      "// should matchTo(expected)"
+    ],
+    "description": "DiffMatcher"
+  },
+  "ScalaTest FunSuite": {
+    "prefix": "scalatest",
+    "body": [
+      "import org.scalatest.concurrent.ScalaFutures",
+      "import org.scalatest.funsuite.AnyFunSuite",
+      "import org.scalatest.matchers.should.Matchers",
+      "",
+      "final class MyTest extends AnyFunSuite with Matchers with ScalaFutures"
+    ],
+    "description": "ScalaTest FunSuite"
+  },
+  "ScalaTest PatienceConfig": {
+    "prefix": "scalatest",
+    "body": [
+      "implicit override val patienceConfig: PatienceConfig = PatienceConfig(timeout = 2.seconds, interval = 200.millis)"
+    ],
+    "description": "ScalaTest PatienceConfig"
+  },
+  "ScalaTest Retries": {
+    "prefix": "",
+    "body": [
+      "// mix in Retries - with Retries",
+      "// tag tests that should be retried",
+      "// \"do some test\" taggedAs(Retryable) in {",
+      "// test(\"my test\", Retryable)",
+      "",
+      "import scala.annotation.tailrec",
+      "import org.scalatest.{ Canceled, Failed, Outcome, _}",
+      "import org.scalatest.tagobjects.Retryable",
+      "",
+      "private val retries = 3",
+      "",
+      "override def withFixture(test: NoArgTest): Outcome =",
+      "  if (isRetryable(test)) retry(test, retries) else super.withFixture(test)",
+      "",
+      "@tailrec",
+      "private def retry(test: NoArgTest, count: Int): Outcome = super.withFixture(test) match {",
+      "  case Failed(_) | Canceled(_) => if (count == 1) super.withFixture(test) else retry(test, count - 1)",
+      "  case outcome => outcome",
+      "}"
+    ],
+    "description": "ScalaTest Retries"
+  },
+  "classpath resource file path": {
+    "prefix": "cpres",
+    "body": [
+      "getClass.getClassLoader.getResource(\"${1:file.ext}\").toString"
+    ],
+    "description": "classpath resource file path"
+  },
+  "classpath resource file to string": {
+    "prefix": "",
+    "body": [
+      "Source.fromResource(\"file.ext\").getLines.mkString(\"\\n\")"
+    ],
+    "description": "classpath resource file to string"
+  },
+  "extension methods Scala 2": {
+    "prefix": "ext",
+    "body": [
+      "trait SomeTypeclassSyntax {",
+      "  implicit def someTypeclassSyntax[A: SomeTypeclass](a: A): SomeTypeclassOps[A] = new SomeTypeclassOps[A](a)",
+      "}",
+      "",
+      "object SomeTypeclassSyntax extends SomeTypeclassSyntax",
+      "",
+      "final class SomeTypeclassOps[A](private val a: A) extends AnyVal {",
+      "  def extensionMethodName(implicit someInstance: SomeTypeClass[A]): SomeReturnType = someInstance(a)",
+      "}"
+    ],
+    "description": "extension methods Scala 2"
+  },
+  "Scala 3 Null Utils": {
+    "prefix": "",
+    "body": [
+      "object NullUtils:",
+      "",
+      "  extension [A](v: A | Null)",
+      "    def toOption: Option[A] = ",
+      "      Option(v).map(_.nn)"
+    ],
+    "description": "Scala 3 Null Utils"
+  },
+  "Wart Remover": {
+    "prefix": "",
+    "body": [
+      "import wartremover.Wart",
+      "",
+      "object WartremoverSettings {",
+      "  val production: List[Wart] = Nil",
+      "  val test: List[Wart] = Nil",
+      "}",
+      ""
+    ],
+    "description": "Wart Remover"
+  },
+  "Circe libs": {
+    "prefix": "",
+    "body": [
+      "val circeCore = \"io.circe\" %% \"circe-core\" % circeV",
+      "val circeParser = \"io.circe\" %% \"circe-parser\" % circeV",
+      "val circeGeneric = \"io.circe\" %% \"circe-generic\" % circeV",
+      "val circeGenericExtras = \"io.circe\" %% \"circe-generic-extras\" % circeV"
+    ],
+    "description": "Circe libs"
+  },
+  "Circe imports": {
+    "prefix": "",
+    "body": [
+      "import io.circe.*",
+      "import io.circe.parser.*",
+      "import io.circe.syntax.*",
+      "import io.circe.generic.semiauto.*",
+      "import io.circe.generic.extras.*",
+      "import io.circe.generic.extras.semiauto.*"
+    ],
+    "description": "Circe imports"
+  },
+  "Sttp asJsonOpt": {
+    "prefix": "",
+    "body": [
+      "private def asJsonOpt[A: Decoder] =",
+      "  asJson[A].mapWithMetadata {",
+      "    case (Right(fixture), _) => Right(Some(fixture))",
+      "    case (Left(error), metadata) =>",
+      "      if (metadata.code == StatusCode.NotFound) Right(None)",
+      "      else Left(error)",
+      "  }",
+      ""
+    ],
+    "description": "Sttp asJsonOpt"
+  },
+  "DynamoDb Test Container": {
+    "prefix": "",
+    "body": [
+      "import com.dimafeng.testcontainers.GenericContainer",
+      "import software.amazon.awssdk.regions.Region",
+      "import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient",
+      "import software.amazon.awssdk.services.dynamodb.model.{ KeyType as AWSKeyType, * }",
+      "import zio.*",
+      "",
+      "// val testContainers = \"com.dimafeng\" %% \"testcontainers-scala-core\" % \"0.41.4\" % Test",
+      "// val localstack = \"org.testcontainers\" % \"localstack\" % \"1.19.1\" % Test",
+      "",
+      "final class DbAttributeType[A](val attributeName: String)",
+      "",
+      "object DynamoDbTestContainer {",
+      "",
+      "  private val arbitraryThroughputThatIsIgnoredByDynamoDBLocal =",
+      "    ProvisionedThroughput.builder.readCapacityUnits(1L).writeCapacityUnits(1L).build",
+      "",
+      "  def layer(",
+      "    tableName: String,",
+      "    primaryKey: DbAttributeType[Long],",
+      "    sortKey: DbAttributeType[String]",
+      "  ): TaskLayer[DynamoDbAsyncClient] =",
+      "    ZLayer.scoped(make(tableName, primaryKey, sortKey))",
+      "",
+      "  private def make(",
+      "    tableName: String,",
+      "    primaryKey: DbAttributeType[Long],",
+      "    sortKey: DbAttributeType[String]",
+      "  ): RIO[Scope, DynamoDbAsyncClient] = {",
+      "",
+      "    val createContainer: RIO[Scope, GenericContainer] = {",
+      "",
+      "      val createAndStart = ZIO.attempt {",
+      "        val container = GenericContainer(\"amazon/dynamodb-local\", exposedPorts = Seq(8000))",
+      "        container.start()",
+      "        container",
+      "      }",
+      "",
+      "      ZIO.acquireRelease(createAndStart)(c => ZIO.attempt(c.stop()).orDie)",
+      "    }",
+      "",
+      "    for {",
+      "      container <- createContainer",
+      "      client <- AWSDynamoDbAsynClient.fromConfig(makeAwsConfig(container))",
+      "      _ <- createTable(client, tableName, primaryKey, sortKey)",
+      "    } yield client",
+      "  }",
+      "",
+      "  private def makeAwsConfig(container: GenericContainer): AWSDynamoDbAsynClient.Config =",
+      "    AWSDynamoDbAsynClient",
+      "      .Config(region = Region.EU_WEST_2)",
+      "      .withEndpoint(container.host, container.underlyingUnsafeContainer.getFirstMappedPort)",
+      "      .withCredentials(\"accessKeyId\", \"secretAccessKey\")",
+      "",
+      "  private def createTable(",
+      "    client: DynamoDbAsyncClient,",
+      "    tableName: String,",
+      "    primaryKey: DbAttributeType[Long],",
+      "    sortKey: DbAttributeType[String]",
+      "  ): Task[Unit] = {",
+      "",
+      "    val request = CreateTableRequest.builder",
+      "      .tableName(tableName)",
+      "      .keySchema(",
+      "        KeySchemaElement.builder",
+      "          .attributeName(primaryKey.attributeName)",
+      "          .keyType(AWSKeyType.HASH)",
+      "          .build,",
+      "        KeySchemaElement.builder.attributeName(sortKey.attributeName).keyType(AWSKeyType.RANGE).build",
+      "      )",
+      "      .attributeDefinitions(",
+      "        AttributeDefinition.builder",
+      "          .attributeName(primaryKey.attributeName)",
+      "          .attributeType(ScalarAttributeType.N)",
+      "          .build,",
+      "        AttributeDefinition.builder",
+      "          .attributeName(sortKey.attributeName)",
+      "          .attributeType(ScalarAttributeType.S)",
+      "          .build",
+      "      )",
+      "      .provisionedThroughput(arbitraryThroughputThatIsIgnoredByDynamoDBLocal)",
+      "      .build",
+      "",
+      "    ZIO.fromFutureJava(client.createTable(request)).unit",
+      "  }",
+      "}"
+    ],
+    "description": "DynamoDb Test Container"
+  },
+  "S3 Test Container": {
+    "prefix": "",
+    "body": [
+      "import java.net.URI",
+      "",
+      "import org.testcontainers.containers.localstack.LocalStackContainer",
+      "import org.testcontainers.containers.localstack.LocalStackContainer.Service.S3",
+      "import org.testcontainers.utility.DockerImageName",
+      "import software.amazon.awssdk.auth.credentials.*",
+      "import software.amazon.awssdk.http.nio.netty.NettyNioAsyncHttpClient",
+      "import software.amazon.awssdk.regions.Region",
+      "import software.amazon.awssdk.services.s3.S3AsyncClient",
+      "import zio.*",
+      "",
+      "import scala.util.chaining.*",
+      "",
+      "// val localstack = \"org.testcontainers\" % \"localstack\" % localstackVersion % \"test\"",
+      "",
+      "object S3TestContainer {",
+      "",
+      "  private lazy val localStackImage = DockerImageName.parse(\"localstack/localstack:0.11.3\")",
+      "",
+      "  val makeLocalstackContainer: RIO[Scope, LocalStackContainer] = {",
+      "",
+      "    val start: Task[LocalStackContainer] =",
+      "      ZIO",
+      "        .attempt(new LocalStackContainer(localStackImage).withServices(S3))",
+      "        .flatMap(c => ZIO.attempt(c.start()).as(c))",
+      "",
+      "    def stop(c: LocalStackContainer): UIO[Unit] =",
+      "      (ZIO.attempt(c.stop()) *> ZIO.attempt(c.close())).orDie",
+      "",
+      "    ZIO.acquireRelease(start)(stop)",
+      "  }",
+      "",
+      "  val layer: TaskLayer[S3AsyncClient] =",
+      "    ZLayer.scoped(",
+      "      makeLocalstackContainer.flatMap { c =>",
+      "        val credentials = StaticCredentialsProvider.create(AwsBasicCredentials.create(c.getAccessKey, c.getSecretKey))",
+      "        makeS3AsyncClient(Region.of(c.getRegion), credentials, Some(c.getEndpoint))",
+      "      }",
+      "    )",
+      "",
+      "  private val httpClient =",
+      "    NettyNioAsyncHttpClient",
+      "      .builder()",
+      "      .maxConcurrency(100)",
+      "      .maxPendingConnectionAcquires(1000)",
+      "      .build()",
+      "",
+      "  private def makeS3AsyncClient(",
+      "    region: Region,",
+      "    credentials: AwsCredentialsProvider,",
+      "    endpoint: Option[URI]",
+      "  ): RIO[Scope, S3AsyncClient] =",
+      "    ZIO.fromAutoCloseable(",
+      "      ZIO.attempt(",
+      "        S3AsyncClient",
+      "          .builder()",
+      "          .httpClient(httpClient)",
+      "          .credentialsProvider(credentials)",
+      "          .region(region)",
+      "          .pipe(b => endpoint.fold(b)(b.endpointOverride(_)))",
+      "          .build()",
+      "      )",
+      "    )",
+      "}"
+    ],
+    "description": "S3 Test Container"
+  },
+  "Future extension methods": {
+    "prefix": "futureext",
+    "body": [
+      "import scala.concurrent.Future",
+      "import scala.concurrent.ExecutionContext",
+      "import scala.util.Try",
+      "",
+      "trait FutureSyntax {",
+      "  implicit def futureSyntax[A](fa: Future[A]): FutureOps[A] = new FutureOps[A](fa)",
+      "}",
+      "",
+      "object FutureSyntax extends FutureSyntax",
+      "",
+      "final class FutureOps[A](private val fa: Future[A]) extends AnyVal {",
+      "",
+      "  def as[B](b: B)(implicit ec: ExecutionContext): Future[B] =",
+      "    fa.map(_ => b)",
+      "",
+      "  def unit(implicit ec: ExecutionContext): Future[Unit] =",
+      "    as(())",
+      "",
+      "  def tap(f: A => Future[Unit])(implicit ec: ExecutionContext): Future[A] =",
+      "    for {",
+      "      a <- fa",
+      "      _ <- f(a)",
+      "    } yield a",
+      "",
+      "  def tapSucceed(f: A => Unit)(implicit ec: ExecutionContext): Future[A] =",
+      "    tap(a => Future.successful(f(a)))",
+      "",
+      "  def tapError(f: Throwable => Future[Unit])(implicit ec: ExecutionContext): Future[A] =",
+      "    fa.recoverWith { case e => f(e).flatMap(_ => fa) }",
+      "",
+      "  def tapErrorSucceed(f: Throwable => Unit)(implicit ec: ExecutionContext): Future[A] =",
+      "    tapError(e => Future.successful(f(e)))",
+      "",
+      "  def recoverToTry(implicit ec: ExecutionContext): Future[Try[A]] =",
+      "    fa.transformWith(Future.successful(_))",
+      "",
+      "  def recoverToEither(implicit ec: ExecutionContext): Future[Either[Throwable, A]] =",
+      "    recoverToTry.map(_.toEither)",
+      "}",
+      ""
+    ],
+    "description": "Future extension methods"
+  },
+  "Try extension methods": {
+    "prefix": "tryext",
+    "body": [
+      "import scala.util.Try",
+      "import scala.util.Failure",
+      "",
+      "trait TrySyntax {",
+      "  implicit def trySyntax[A](ta: Try[A]): TryOps[A] = new TryOps[A](ta)",
+      "}",
+      "",
+      "object TrySyntax extends TrySyntax",
+      "",
+      "final class TryOps[A](private val ta: Try[A]) extends AnyVal {",
+      "",
+      "  def as[B](b: B): Try[B] = ta.map(_ => b)",
+      "",
+      "  def unit: Try[Unit] = as(())",
+      "",
+      "  def tap(f: A => Try[Unit]): Try[A] = for {",
+      "    a <- ta",
+      "    _ <- f(a)",
+      "  } yield a",
+      "",
+      "  def tapSucceed(f: A => Unit): Try[A] =",
+      "    tap(a => Try(f(a)))",
+      "",
+      "  def tapError(f: Throwable => Try[Unit]): Try[A] =",
+      "    ta.recoverWith { case e => f(e).flatMap(_ => ta) }",
+      "",
+      "  def tapErrorSucceed(f: Throwable => Unit): Try[A] =",
+      "    tapError(e => Try(f(e)))",
+      "",
+      "  def mapError(f: Throwable => Throwable): Try[A] =",
+      "    ta.recoverWith { case e =>",
+      "      Failure(f(e))",
+      "    }",
+      "}"
+    ],
+    "description": "Try extension methods"
+  }
+}
