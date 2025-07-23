@@ -57,7 +57,7 @@
     ],
     "description": "Scala 2 compiler flags"
   },
-  "Pirum Core compiler flags": {
+  "Core compiler flags": {
     "prefix": "",
     "body": [
       "\"-unchecked\", ",
@@ -84,7 +84,7 @@
       "\"100\", ",
       "\"-Yrangepos\" "
     ],
-    "description": "Pirum Core compiler flags"
+    "description": "Core compiler flags"
   },
   "Braces": {
     "prefix": "",
